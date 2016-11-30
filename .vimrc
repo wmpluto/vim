@@ -74,6 +74,7 @@ set cindent
 
 "设置匹配模式
 set showmatch
+
 "搜索设置
 set ignorecase smartcase
 set hlsearch
@@ -89,7 +90,7 @@ inoremap <A-j> <Down>
 inoremap <A-k> <Up>
 inoremap <A-l> <Right>
 
-"配置 Vundle
+"其他
 set nocompatible
 filetype off
 
