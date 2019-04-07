@@ -1,3 +1,10 @@
+" set up Vundle before use this vimrc
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" Then Launch vim and run :PluginInstall
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -6,14 +13,12 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'molokai'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 " Plugin 'tpope/vim-fugitive'
-
-Plugin 'tomasr/molokai'
-Plugin 'altercation/vim-colors-solarized'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -42,55 +47,52 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-"语法自动高亮
-syntax enable 
-
-"配色 theme放到vundle了
-colorscheme molokai
+" 设置主题
+syntax enable
+set t_Co=256
 set background=dark
+colorscheme molokai
 
-"显示行号
+" 显示行号
 set number
-"突出显示当前行
+
+" 突出显示当前行
 set cursorline
 
-"状态栏标尺
+" 状态栏标尺
 set ruler
-"显示状态栏
+
+" 显示状态栏
 set laststatus=2
 set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
-"去掉toolbar
+
+" 去掉toolbar
 set guioptions=T
 
-"Tab键设置
+" Tab键设置
 set shiftwidth=4
 set tabstop=4
 set expandtab
 
-"对齐设置
+" 对齐设置
 set smartindent
 set autoindent
 set cindent
 
-"设置匹配模式
+" 设置匹配模式
 set showmatch
 
-"搜索设置
+" 搜索设置
 set ignorecase smartcase
 set hlsearch
 
-"响铃设置
+" 响铃设置
 set noerrorbells
 
-"按键映射
+" 按键映射
 imap jj <Esc>
 
 inoremap <A-h> <Left>
 inoremap <A-j> <Down>
 inoremap <A-k> <Up>
 inoremap <A-l> <Right>
-
-"其他
-set nocompatible
-filetype off
-
